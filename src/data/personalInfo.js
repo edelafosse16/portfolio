@@ -36,8 +36,7 @@ const personalInfo = {
       title: "Cohort-Targeting Tool",
       category: "Professional, anonymized",
       description: "Self-service framework that let operations teams target affected user cohorts during site-wide incidents rather than escalating each one manually. Saved hundreds of thousands of dollars per major incident.",
-      // [TK] Eric: what tools/stack did this actually use? Not guessing.
-      technologies: ["[TK]"]
+      technologies: ["Amplitude", "Excel", "KNIME"]
     },
     {
       title: "Stock Screener",
@@ -49,8 +48,8 @@ const personalInfo = {
       title: "fosseeboss",
       category: "Personal, creative",
       description: "Self-published sports and entertainment newsletter. Game breakdowns, narrative, and stats worth arguing about.",
-      // [TK] Eric: newsletter URL needed to actually link this.
-      technologies: ["[TK]"]
+      technologies: ["Substack"],
+      link: "https://thefossover.substack.com/"
     },
     {
       title: "This Portfolio Site",
