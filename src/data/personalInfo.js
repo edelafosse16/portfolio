@@ -7,10 +7,10 @@ const personalInfo = {
   name: "Eric Delafosse",
   title: "Business Operations Analyst",
   about: [
-    "I'm a business analyst who turns operational chaos into measurable wins. In my last role at a major sports betting and daily fantasy platform, I cut operational incidents by 60%, saved 600+ hours a year through automation, and delivered more than $1M in process improvements. My sweet spot is building self-service frameworks that let teams solve their own problems.",
-    "I worked across fantasy, sportsbook, casino, racing, and prediction products, which taught me that every operation has its own weird edge cases. I like finding them, fixing them, and writing the playbook so it doesn't happen again.",
-    "Before operations, I was a tax accountant at a small firm, which is where I picked up the habit of triple-checking the numbers before presenting them.",
-    "If your team needs someone who can dig into messy operational data, spot the patterns that matter, and build strategic solutions that actually stick, I'd love to help."
+    "I'm a business analyst who fixes the processes nobody else wants to touch. At a major sports betting and daily fantasy platform, I cut operational incidents by 60%, saved 600+ hours per project through automation, and drove more than $1M in process improvements across six product lines.",
+    "I worked fantasy, sportsbook, casino, and racing products, and every single one had its own weird edge cases nobody had bothered to fix. I found them, fixed them, and wrote the playbook so the next person didn't have to relearn it the hard way.",
+    "Before operations, I was a tax accountant at a small firm. I triple-checked numbers before anyone saw them, and I still do.",
+    "I want the operational mess nobody's had the bandwidth to fix. That's exactly where I do my best work."
   ],
   skills: {
     core: [
