@@ -8,13 +8,13 @@ const skillShape = PropTypes.shape({
 
 const SkillGroup = ({ title, items, startDelay }) => (
   <div className="space-y-4">
-    <h3 className="text-xl font-semibold text-green-800">{title}</h3>
+    <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">{title}</h3>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {items.map((skill, index) => (
         <FadeIn key={skill.name} delay={startDelay + index * 100}>
-          <div className="p-4 bg-white/80 backdrop-blur-sm rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-            <h4 className="font-semibold text-green-800">{skill.name}</h4>
-            {skill.detail && <p className="text-gray-600">{skill.detail}</p>}
+          <div className="p-4 bg-surface border border-line rounded-xl transition-colors duration-300 hover:border-accent/60">
+            <h4 className="font-semibold text-ink">{skill.name}</h4>
+            {skill.detail && <p className="mt-1 text-sm text-muted">{skill.detail}</p>}
           </div>
         </FadeIn>
       ))}
@@ -29,9 +29,9 @@ SkillGroup.propTypes = {
 };
 
 const SkillsSection = ({ skills }) => (
-  <div className="space-y-8 bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl">
+  <div className="space-y-10">
     <FadeIn>
-      <h2 className="text-3xl font-bold text-green-900">Skills</h2>
+      <h2 className="text-display-md text-ink">Skills</h2>
     </FadeIn>
     <SkillGroup title="Core toolkit" items={skills.core} startDelay={0} />
     <SkillGroup title="Currently learning" items={skills.learning} startDelay={skills.core.length * 100} />

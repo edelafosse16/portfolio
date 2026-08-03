@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Palette. Keep these numerically in sync with tailwind.config.js
+     theme.extend.colors — Tailwind utilities are the primary way
+     components consume color; these exist for the rare non-Tailwind case. */
+  --color-bg: #0e0e10;
+  --color-surface: #19191c;
+  --color-ink: #f3f0ea;
+  --color-muted: #8f8c86;
+  --color-line: #2a2a2d;
+  --color-accent: #ffb238;
+  --color-accent-contrast: #0e0e10;
+}
+
+@layer base {
+  html {
+    @apply bg-bg text-ink;
+  }
+
+  body {
+    @apply font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.DEFAULT');
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

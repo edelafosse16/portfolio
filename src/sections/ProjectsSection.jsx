@@ -2,30 +2,30 @@ import PropTypes from 'prop-types';
 import FadeIn from '../components/ui/FadeIn';
 
 const ProjectsSection = ({ projects }) => (
-  <div className="space-y-6 bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl">
+  <div className="space-y-10">
     <FadeIn>
-      <h2 className="text-3xl font-bold text-orange-900">Projects</h2>
+      <h2 className="text-display-md text-ink">Projects</h2>
     </FadeIn>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {projects.map((project, index) => (
-        <FadeIn key={project.title} delay={index * 200}>
-          <div className="p-6 bg-white/80 backdrop-blur-sm rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <h3 className="text-xl font-semibold text-orange-800">
+        <FadeIn key={project.title} delay={index * 150}>
+          <div className="p-6 bg-surface border border-line rounded-xl transition-colors duration-300 hover:border-accent/60">
+            <h3 className="text-xl font-semibold text-ink">
               {project.link ? (
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
                   {project.title}
                 </a>
               ) : (
                 project.title
               )}
             </h3>
-            <p className="text-sm text-orange-600 mb-2">{project.category}</p>
-            <p className="text-gray-700 mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2">
+            <p className="mt-1 text-xs uppercase tracking-wide text-muted">{project.category}</p>
+            <p className="mt-4 text-muted">{project.description}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm transition-colors duration-300 hover:bg-orange-200"
+                  className="px-3 py-1 bg-bg border border-line rounded-full text-xs text-muted"
                 >
                   {tech}
                 </span>

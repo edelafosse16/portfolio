@@ -13,10 +13,10 @@ function App() {
   const isScrolled = useScrolled();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-bg">
       <Header name={personalInfo.name} title={personalInfo.title} />
       <Nav activeSection={activeSection} onSelect={setActiveSection} isScrolled={isScrolled} />
-      <main className="max-w-5xl mx-auto px-4 py-8 space-y-8">
+      <main className="max-w-5xl mx-auto px-6 py-16 md:py-20">
         {activeSection === 'about' && <AboutSection about={personalInfo.about} />}
         {activeSection === 'skills' && <SkillsSection skills={personalInfo.skills} />}
         {activeSection === 'projects' && <ProjectsSection projects={personalInfo.projects} />}

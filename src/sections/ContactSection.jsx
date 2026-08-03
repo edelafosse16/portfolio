@@ -10,9 +10,9 @@ const ContactSection = ({ contact }) => {
   ];
 
   return (
-    <div className="space-y-6 bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl">
+    <div className="space-y-10">
       <FadeIn>
-        <h2 className="text-3xl font-bold text-purple-900">Contact</h2>
+        <h2 className="text-display-md text-ink">Contact</h2>
       </FadeIn>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {links.map((link, index) => (
@@ -21,12 +21,12 @@ const ContactSection = ({ contact }) => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 p-4 bg-white/80 backdrop-blur-sm rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+              className="flex items-center gap-3 p-4 bg-surface border border-line rounded-xl transition-colors duration-300 hover:border-accent/60 group"
             >
-              <span className="transition-transform duration-300 group-hover:rotate-12 text-purple-600">
+              <span className="text-muted transition-colors duration-300 group-hover:text-accent">
                 {link.icon}
               </span>
-              <span className="transition-colors duration-300 group-hover:text-purple-600">
+              <span className="text-ink transition-colors duration-300 group-hover:text-accent">
                 {link.text}
               </span>
             </a>

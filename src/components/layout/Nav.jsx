@@ -10,12 +10,12 @@ const SECTIONS = [
 
 const Nav = ({ activeSection, onSelect, isScrolled }) => (
   <nav
-    className={`bg-white/80 backdrop-blur-md border-b transition-all duration-300 sticky top-20 z-40 ${
-      isScrolled ? 'shadow-sm' : ''
+    className={`bg-bg/80 backdrop-blur-md border-b border-line transition-shadow duration-300 sticky top-0 z-40 ${
+      isScrolled ? 'shadow-[0_1px_0_0_theme(colors.line)]' : ''
     }`}
   >
-    <div className="max-w-5xl mx-auto px-4 py-4">
-      <div className="flex gap-4">
+    <div className="max-w-5xl mx-auto px-6 py-4">
+      <div className="flex gap-2">
         {SECTIONS.map(({ section, label }) => (
           <NavButton
             key={section}

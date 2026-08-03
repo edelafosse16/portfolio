@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 const NavButton = ({ section, label, activeSection, onSelect }) => (
   <button
     onClick={() => onSelect(section)}
-    className={`px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 ${
+    className={`px-4 py-2 rounded-full text-sm md:text-base font-medium transition-colors duration-300 ${
       activeSection === section
-        ? 'bg-blue-600 text-white shadow-lg'
-        : 'hover:bg-blue-100 bg-white'
+        ? 'bg-accent text-accent-contrast'
+        : 'text-muted hover:text-ink'
     }`}
   >
     {label}
