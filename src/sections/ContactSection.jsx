@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
-import { Mail, Phone, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 import FadeIn from '../components/ui/FadeIn';
 
 const ContactSection = ({ contact }) => {
   const links = [
     { icon: <Mail size={20} />, text: contact.email, href: `mailto:${contact.email}` },
-    { icon: <Phone size={20} />, text: contact.phone, href: `tel:${contact.phone}` },
     { icon: <Github size={20} />, text: contact.github, href: `https://${contact.github}` },
     { icon: <Linkedin size={20} />, text: contact.linkedin, href: `https://${contact.linkedin}` },
   ];
@@ -41,7 +40,6 @@ const ContactSection = ({ contact }) => {
 ContactSection.propTypes = {
   contact: PropTypes.shape({
     email: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
     github: PropTypes.string.isRequired,
     linkedin: PropTypes.string.isRequired,
   }).isRequired,

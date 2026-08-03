@@ -10,7 +10,8 @@ const ProjectsSection = ({ projects }) => (
       {projects.map((project, index) => (
         <FadeIn key={project.title} delay={index * 200}>
           <div className="p-6 bg-white/80 backdrop-blur-sm rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <h3 className="text-xl font-semibold mb-2 text-orange-800">{project.title}</h3>
+            <h3 className="text-xl font-semibold text-orange-800">{project.title}</h3>
+            <p className="text-sm text-orange-600 mb-2">{project.category}</p>
             <p className="text-gray-700 mb-4">{project.description}</p>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
@@ -33,6 +34,7 @@ ProjectsSection.propTypes = {
   projects: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
