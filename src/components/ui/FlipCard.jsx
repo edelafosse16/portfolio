@@ -24,19 +24,21 @@ const FlipCard = ({ front, back }) => {
       }}
       className="relative [perspective:1200px] cursor-pointer"
     >
+      {/* grid stacks both faces in the same cell, so the card sizes itself
+          to whichever face is taller instead of clipping the back content */}
       <div
-        className="relative transition-transform duration-500 [transform-style:preserve-3d]"
+        className="grid transition-transform duration-500 [transform-style:preserve-3d]"
         style={{ transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
       >
         <div
-          className="[backface-visibility:hidden]"
+          className="col-start-1 row-start-1 [backface-visibility:hidden]"
           aria-hidden={isFlipped}
           {...(isFlipped ? { inert: '' } : {})}
         >
           {front}
         </div>
         <div
-          className="absolute inset-0 [backface-visibility:hidden]"
+          className="col-start-1 row-start-1 [backface-visibility:hidden]"
           style={{ transform: 'rotateY(180deg)' }}
           aria-hidden={!isFlipped}
           {...(!isFlipped ? { inert: '' } : {})}

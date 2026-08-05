@@ -24,7 +24,7 @@ const Hero = ({ name, title, tagline }) => {
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 -top-32 h-[36rem] w-[36rem] rounded-full bg-accent/25 blur-[120px] motion-safe:animate-hero-drift md:h-[44rem] md:w-[44rem]"
+        className="pointer-events-none absolute -right-16 -top-16 h-[18rem] w-[18rem] rounded-full bg-accent/25 blur-[90px] motion-safe:animate-hero-drift sm:h-[26rem] sm:w-[26rem] md:-right-32 md:-top-32 md:h-[36rem] md:w-[36rem] md:blur-[120px] lg:h-[44rem] lg:w-[44rem]"
       />
       <div className="relative z-10 max-w-5xl mx-auto px-6 w-full">
         <motion.h1 {...reveal(0)} className="text-display-xl text-ink">
