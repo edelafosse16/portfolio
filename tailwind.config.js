@@ -30,6 +30,17 @@ export default {
       transitionTimingFunction: {
         smooth: 'cubic-bezier(0.22, 1, 0.36, 1)',
       },
+      keyframes: {
+        // Slow, low-amplitude drift for the hero's background shape.
+        // Frozen automatically by the prefers-reduced-motion rule in index.css.
+        'hero-drift': {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(-2%, 3%) scale(1.05)' },
+        },
+      },
+      animation: {
+        'hero-drift': 'hero-drift 14s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

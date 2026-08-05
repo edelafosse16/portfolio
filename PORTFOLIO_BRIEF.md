@@ -61,7 +61,7 @@ Diagnosis from reading the source, concrete rather than vibes:
 - Content data extracted to a separate data module
 - Visual redesign: custom color, typography, spacing, and motion tokens
 - Framer Motion for section transitions and scroll reveals
-- Hero section with a photo of Eric
+- Type-led hero section (no photo, see section 5)
 - A flip-card interaction somewhere in the mid-page
 - Real project content
 - Accurate contact and skills content
@@ -96,7 +96,7 @@ Diagnosis from reading the source, concrete rather than vibes:
 
 - Dark or moody base, not white-background-with-colored-cards
 - Oversized editorial typography. Type is the primary design element, not decoration around cards
-- Large hero imagery given room to breathe
+- Large hero moment given room to breathe (type-led, not a photo — see the hero spec below)
 - Generous negative space. Content is not packed edge to edge
 - Motion is scroll-triggered and smooth, revealing content rather than swapping it instantly
 - Restrained palette. Typically a dark base, an off-white, and one accent color used sparingly
@@ -191,7 +191,7 @@ Real projects to feature. **Only the shape is specified here. Do not write the d
    React, Vite, Tailwind, Framer Motion. Built as part of deliberate upskilling.
    Recommended as the lowest-risk fourth item: it is self-evidently real, it is the thing the viewer is already looking at, and it demonstrates the learning claim in the Skills section rather than just asserting it.
 
-`[TK]` **Hero photo.** The design calls for a large photo of Eric near the top. Eric needs to supply an image file. Recommend a landscape or square crop at 1600px on the long edge minimum, and note that a dark or neutral background will composite better against a near-black page. Until it exists, build with a placeholder block at the correct aspect ratio rather than a stock photo.
+**Hero: type-led, no photo.** Revised 2026-08-03 — Eric decided against a photo. The hero is full viewport height, name set very large with `clamp()`, title and one positioning line underneath in muted text. One abstract CSS background visual: a single heavily-blurred accent-colored shape, off-center (chosen over a gradient mesh, a dot/line grid with parallax, or a grain texture — simplest to execute well, cheapest to keep performant, and reads as restrained rather than showy). Staggered entrance reveal, under a second total, degrading to a static state under `prefers-reduced-motion`. No `<img>` tag anywhere in the hero.
 
 ---
 
@@ -255,7 +255,7 @@ src/
 2. Build a reusable scroll-reveal component using `whileInView` with `viewport={{ once: true }}`. Replace the existing `FadeInSection`, whose current `setTimeout` approach fires on mount regardless of whether the content is actually on screen.
 3. Implement section transitions on tab change using `AnimatePresence` with `mode="wait"` so the outgoing section finishes leaving before the incoming one arrives.
 4. Build the flip card for Projects. Click-triggered, not hover, so it works on touch. Hidden face is removed from tab order and hidden from assistive tech.
-5. Build the hero: large photo, oversized name and title, an intentional entrance animation.
+5. Build the hero: type-led, full viewport height, oversized name via `clamp()`, title and one positioning line, one abstract CSS background visual (blurred accent shape, off-center), staggered entrance under 1s. No `<img>` tag.
 6. Wire up `prefers-reduced-motion`. Framer Motion's `useReducedMotion` hook handles this. Transforms and large movements are disabled, opacity fades may remain.
 
 **Checkpoint: commit. Test on an actual phone, not just a narrow browser window.**
@@ -283,7 +283,7 @@ Carry these into the session. Do not resolve them by picking a reasonable defaul
 3. Stock screener: publish the strategy parameters or keep it descriptive?
 4. fosseeboss: link it from the site, yes or no?
 5. Skills tier label: "Actively building", or different wording?
-6. Hero photo: needs an actual image file.
+6. ~~Hero photo~~ — resolved 2026-08-03: no photo, hero is type-led (see section 6).
 7. Accent color: which one? Recommend picking from a few options rendered against the real background rather than choosing from a hex code in the abstract.
 
 ---
