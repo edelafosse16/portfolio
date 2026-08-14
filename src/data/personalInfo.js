@@ -63,7 +63,7 @@ const personalInfo = {
       technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"]
     },
     {
-      title: "fosseeboss",
+      title: "The Fossover",
       category: "Personal, creative",
       outcome: "Self-published sports and entertainment newsletter.",
       description: "Self-published sports and entertainment newsletter. Game breakdowns, narrative, and stats worth arguing about.",
