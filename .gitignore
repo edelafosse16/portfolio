@@ -19,6 +19,9 @@ dist-ssr
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Unrelated project sitting in this same folder, not part of this repo
+nfl_war/
 .DS_Store
 *.suo
 *.ntvs*

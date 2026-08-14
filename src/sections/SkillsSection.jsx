@@ -13,8 +13,14 @@ const SkillGroup = ({ title, items, startDelay }) => (
       {items.map((skill, index) => (
         <FadeIn key={skill.name} delay={startDelay + index * 100}>
           <div className="p-4 bg-surface border border-line rounded-xl transition-colors duration-300 hover:border-accent/60">
-            <h4 className="font-semibold text-ink">{skill.name}</h4>
-            {skill.detail && <p className="mt-1 text-sm text-muted">{skill.detail}</p>}
+            {skill.detail ? (
+              <>
+                <h4 className="font-semibold text-ink">{skill.name}</h4>
+                <p className="mt-1 text-sm text-muted">{skill.detail}</p>
+              </>
+            ) : (
+              <p className="text-ink">{skill.name}</p>
+            )}
           </div>
         </FadeIn>
       ))}
