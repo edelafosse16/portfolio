@@ -6,9 +6,7 @@
 const personalInfo = {
   name: "Eric Delafosse",
   title: "Business Operations Analyst",
-  // [TK] Eric to write the final hero positioning line. Placeholder kept
-  // visible on purpose rather than a guessed line — resolve in the final copy pass.
-  tagline: "[TK] — one-line positioning statement for the hero.",
+  tagline: "A process that's 'always been done this way' is usually just waiting for someone confident enough to ask why.",
   about: [
     "I'm a business analyst who fixes the processes nobody else wants to touch. At a major sports betting and daily fantasy platform, I cut operational incidents by 60%, saved 600+ hours per project through automation, and drove more than $1M in process improvements across six product lines.",
     "I worked fantasy, sportsbook, casino, and racing products, and every single one had its own weird edge cases nobody had bothered to fix. I found them, fixed them, and wrote the playbook so the next person didn't have to relearn it the hard way.",
@@ -51,12 +49,11 @@ const personalInfo = {
       technologies: ["Google Sheets"]
     },
     {
-      title: "fosseeboss",
+      title: "NFL Offensive WAR Leaderboard",
       category: "Personal, creative",
-      outcome: "Self-published sports and entertainment newsletter.",
-      description: "Self-published sports and entertainment newsletter. Game breakdowns, narrative, and stats worth arguing about.",
-      technologies: ["Substack"],
-      link: "https://thefossover.substack.com/"
+      outcome: "Custom WAR leaderboard for the 2025 NFL season, built from play-by-play data.",
+      description: "An offensive WAR (Wins Above Replacement) leaderboard for the 2025 NFL season, built by a custom pipeline (not an official NFL/nflverse stat). Credits each player's EPA by position, nets it against a replacement-level baseline set by the lowest-volume qualifying players, then converts EPA above replacement into wins via a regression of team wins on team offensive EPA (R²=0.53 across 2020-2025).",
+      technologies: ["R", "nflreadr", "dplyr"]
     },
     {
       title: "This Portfolio Site",
@@ -64,6 +61,14 @@ const personalInfo = {
       outcome: "Built as part of deliberate upskilling in React.",
       description: "This site itself, rebuilt from a default Vite starter as part of deliberate upskilling in React.",
       technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"]
+    },
+    {
+      title: "fosseeboss",
+      category: "Personal, creative",
+      outcome: "Self-published sports and entertainment newsletter.",
+      description: "Self-published sports and entertainment newsletter. Game breakdowns, narrative, and stats worth arguing about.",
+      technologies: ["Substack"],
+      link: "https://thefossover.substack.com/"
     }
   ]
 };
