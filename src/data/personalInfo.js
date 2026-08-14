@@ -58,7 +58,7 @@ const personalInfo = {
     {
       title: "This Portfolio Site",
       category: "Personal, technical",
-      outcome: "Built as part of deliberate upskilling in React.",
+      outcome: "Built this site to upskill in React.",
       description: "This site itself, rebuilt from a default Vite starter as part of deliberate upskilling in React.",
       technologies: ["React", "Vite", "Tailwind CSS", "Framer Motion"]
     },
