@@ -34,7 +34,7 @@ const personalInfo = {
   },
   projects: [
     {
-      title: "Cohort-Targeting Tool",
+      title: "Cohort Targeting Tool",
       category: "Professional, anonymized",
       // outcome is the flip-card front line, derived from description below, no new claims added.
       outcome: "Saved hundreds of thousands of dollars per major incident.",
