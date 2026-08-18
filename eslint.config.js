@@ -7,7 +7,10 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
-    files: ['**/*.{js,jsx}'],
+    // Scoped to this project's own files only. Sibling folders sometimes sit
+    // in this same parent directory (other unrelated personal projects) --
+    // an unscoped '**/*.{js,jsx}' glob would recurse into those too.
+    files: ['src/**/*.{js,jsx}', '*.config.js'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
