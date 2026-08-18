@@ -4,6 +4,7 @@ import personalInfo from './data/personalInfo';
 import useScrolled from './hooks/useScrolled';
 import Hero from './components/layout/Hero';
 import Nav from './components/layout/Nav';
+import Footer from './components/layout/Footer';
 import AboutSection from './sections/AboutSection';
 import SkillsSection from './sections/SkillsSection';
 import ProjectsSection from './sections/ProjectsSection';
@@ -40,6 +41,7 @@ function App() {
           </motion.div>
         </AnimatePresence>
       </main>
+      <Footer name={personalInfo.name} />
     </div>
   );
 }
