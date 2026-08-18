@@ -1,13 +1,21 @@
 import PropTypes from 'prop-types';
 import { motion, useReducedMotion } from 'framer-motion';
+import ScrollCue from '../ui/ScrollCue';
 
 const EASE = [0.22, 1, 0.36, 1];
 
 // Type-led hero, no photo. The only visuals beyond text are two
 // heavily-blurred accent shapes, off-center, built entirely in CSS —
 // a primary one top-right and a smaller, quieter one bottom-left.
-const Hero = ({ name, title, tagline }) => {
+const Hero = ({ name, title, tagline, isScrolled }) => {
   const prefersReducedMotion = useReducedMotion();
+
+  const scrollToContent = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    });
+  };
 
   // Each line reveals on its own explicit delay, staggered so the whole
   // sequence finishes well under a second.
@@ -42,6 +50,7 @@ const Hero = ({ name, title, tagline }) => {
           {tagline}
         </motion.p>
       </div>
+      <ScrollCue visible={!isScrolled} onClick={scrollToContent} />
     </section>
   );
 };
@@ -50,6 +59,7 @@ Hero.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tagline: PropTypes.string.isRequired,
+  isScrolled: PropTypes.bool.isRequired,
 };
 
 export default Hero;

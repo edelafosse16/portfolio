@@ -38,9 +38,15 @@ export default {
           '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
           '50%': { transform: 'translate(-2%, 3%) scale(1.05)' },
         },
+        // Slow, gentle bob for the hero's scroll-down cue.
+        'scroll-cue-bounce': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(6px)' },
+        },
       },
       animation: {
         'hero-drift': 'hero-drift 14s ease-in-out infinite',
+        'scroll-cue-bounce': 'scroll-cue-bounce 2s ease-in-out infinite',
       },
     },
   },

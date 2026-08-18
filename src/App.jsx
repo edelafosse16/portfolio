@@ -26,7 +26,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-bg">
-      <Hero name={personalInfo.name} title={personalInfo.title} tagline={personalInfo.tagline} />
+      <Hero
+        name={personalInfo.name}
+        title={personalInfo.title}
+        tagline={personalInfo.tagline}
+        isScrolled={isScrolled}
+      />
       <Nav activeSection={activeSection} onSelect={setActiveSection} isScrolled={isScrolled} />
       <main className="max-w-5xl mx-auto px-6 py-16 md:py-20">
         <AnimatePresence mode="wait">
