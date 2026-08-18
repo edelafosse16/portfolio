@@ -15,6 +15,7 @@ export default {
         accent: {
           DEFAULT: '#FFB238',
           contrast: '#0E0E10',
+          deep: '#E0972B',
         },
       },
       fontFamily: {

@@ -13,6 +13,7 @@
   --color-line: #2a2a2d;
   --color-accent: #ffb238;
   --color-accent-contrast: #0e0e10;
+  --color-accent-deep: #e0972b;
 }
 
 @layer base {

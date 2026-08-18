@@ -5,7 +5,7 @@ const NavButton = ({ section, label, activeSection, onSelect }) => (
     onClick={() => onSelect(section)}
     className={`px-4 py-2 rounded-full text-sm md:text-base font-medium transition-colors duration-300 ${
       activeSection === section
-        ? 'bg-accent text-accent-contrast'
+        ? 'bg-accent text-accent-contrast ring-2 ring-inset ring-accent-deep'
         : 'text-muted hover:text-ink'
     }`}
   >
