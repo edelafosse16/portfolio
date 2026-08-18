@@ -3,8 +3,9 @@ import { motion, useReducedMotion } from 'framer-motion';
 
 const EASE = [0.22, 1, 0.36, 1];
 
-// Type-led hero, no photo. The only visual beyond text is a single
-// heavily-blurred accent shape, off-center, built entirely in CSS.
+// Type-led hero, no photo. The only visuals beyond text are two
+// heavily-blurred accent shapes, off-center, built entirely in CSS —
+// a primary one top-right and a smaller, quieter one bottom-left.
 const Hero = ({ name, title, tagline }) => {
   const prefersReducedMotion = useReducedMotion();
 
@@ -25,6 +26,10 @@ const Hero = ({ name, title, tagline }) => {
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-16 -top-16 h-[18rem] w-[18rem] rounded-full bg-accent/25 blur-[90px] motion-safe:animate-hero-drift sm:h-[26rem] sm:w-[26rem] md:-right-32 md:-top-32 md:h-[36rem] md:w-[36rem] md:blur-[120px] lg:h-[44rem] lg:w-[44rem]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-10 -bottom-10 h-[10rem] w-[10rem] rounded-full bg-accent/10 blur-[70px] motion-safe:animate-hero-drift sm:h-[14rem] sm:w-[14rem] md:-left-16 md:-bottom-16 md:h-[20rem] md:w-[20rem] md:blur-[100px] lg:h-[24rem] lg:w-[24rem]"
       />
       <div className="relative z-10 max-w-5xl mx-auto px-6 w-full">
         <motion.h1 {...reveal(0)} className="text-display-xl text-ink">
