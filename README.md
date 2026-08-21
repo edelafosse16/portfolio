@@ -31,4 +31,4 @@ npm run lint
 
 ## Deployment
 
-Not yet deployed. Leaning toward GitHub Pages; see `PORTFOLIO_BRIEF.md` for the open questions on hosting.
+Deployed!
