@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import FadeIn from '../components/ui/FadeIn';
+import NetworkMotif from '../components/ui/NetworkMotif';
 
 const skillShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
@@ -35,12 +36,15 @@ SkillGroup.propTypes = {
 };
 
 const SkillsSection = ({ skills }) => (
-  <div className="space-y-10">
-    <FadeIn>
-      <h2 className="text-display-md text-ink">Skills</h2>
-    </FadeIn>
-    <SkillGroup title="Core toolkit" items={skills.core} startDelay={0} />
-    <SkillGroup title="Currently learning" items={skills.learning} startDelay={skills.core.length * 100} />
+  <div className="relative">
+    <NetworkMotif />
+    <div className="relative z-10 space-y-10">
+      <FadeIn>
+        <h2 className="text-display-md text-ink">Skills</h2>
+      </FadeIn>
+      <SkillGroup title="Core toolkit" items={skills.core} startDelay={0} />
+      <SkillGroup title="Currently learning" items={skills.learning} startDelay={skills.core.length * 100} />
+    </div>
   </div>
 );
 
