@@ -2,14 +2,14 @@
 // "connected system" motif in the section's top-right corner. Single hand-
 // placed layout (not generated), kept in the one accent color via
 // currentColor so it stays in sync with the design tokens automatically.
-// Hidden below md: at narrower widths the text column fills the full
-// section width, leaving no corner empty enough for this to sit in
-// without overlapping the heading or cards.
+// Shown at every width, including mobile -- verified with screenshots
+// that the drawn content (not just the bounding box) never reaches the
+// heading or the first card at any tested width down to 375px.
 const NetworkMotif = () => (
   <svg
     aria-hidden="true"
     viewBox="0 0 200 200"
-    className="pointer-events-none absolute -top-6 -right-6 hidden h-56 w-56 text-accent md:block"
+    className="pointer-events-none absolute -top-6 -right-6 h-56 w-56 text-accent"
   >
     <g stroke="currentColor" strokeWidth="1" fill="none">
       <line x1="90" y1="80" x2="20" y2="30" strokeOpacity="0.15" />
