@@ -19,10 +19,10 @@ const personalInfo = {
       { name: "Amplitude", detail: "Product analytics and cohort analysis" },
       { name: "Jira", detail: "Workflow and ticket operations" },
       { name: "Miro", detail: "Process mapping and design" },
-      { name: "Process design, incident reduction, operational reporting, workflow automation" }
+      { name: "Incident reduction, operational reporting, workflow automation" }
     ],
     learning: [
-      { name: "Python for data analysis", detail: "pandas, matplotlib, seaborn" },
+      { name: "Python for data analysis" },
       { name: "SQL" },
       { name: "JavaScript and React" }
     ]
