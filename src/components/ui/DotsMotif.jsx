@@ -1,6 +1,6 @@
 // A loose, unconnected scatter of dots -- deliberately the opposite of the
 // Skills/Projects network motif's connected nodes. Corner-anchored, quiet.
-// Hidden below lg: at narrower widths the text column fills the full
+// Hidden below md: at narrower widths the text column fills the full
 // section width, leaving no corner empty enough for this to sit in
 // without landing on top of body text.
 const DOTS = [
@@ -18,7 +18,7 @@ const DotsMotif = () => (
   <svg
     aria-hidden="true"
     viewBox="0 0 200 200"
-    className="pointer-events-none absolute -right-6 -bottom-6 hidden h-56 w-56 text-accent lg:block"
+    className="pointer-events-none absolute -right-6 -bottom-6 hidden h-56 w-56 text-accent md:block"
   >
     {DOTS.map((dot, index) => (
       <circle key={index} cx={dot.cx} cy={dot.cy} r={dot.r} fill="currentColor" fillOpacity={dot.opacity} />
