@@ -11,9 +11,8 @@ const ContactSection = ({ contact }) => {
   ];
 
   return (
-    <div className="relative">
-      <DotsMotif />
-      <div className="relative z-10 space-y-10">
+    <div>
+      <div className="space-y-10">
         <FadeIn>
           <h2 className="text-display-md text-ink">Contact</h2>
         </FadeIn>
@@ -36,6 +35,9 @@ const ContactSection = ({ contact }) => {
             </FadeIn>
           ))}
         </div>
+      </div>
+      <div className="mt-8 flex justify-end">
+        <DotsMotif />
       </div>
     </div>
   );
