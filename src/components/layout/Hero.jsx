@@ -30,7 +30,7 @@ const Hero = ({ name, title, tagline, isScrolled }) => {
   });
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-screen-safe flex flex-col justify-center overflow-hidden">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-16 -top-16 h-[18rem] w-[18rem] rounded-full bg-accent/25 blur-[90px] motion-safe:animate-hero-drift sm:h-[26rem] sm:w-[26rem] md:-right-32 md:-top-32 md:h-[36rem] md:w-[36rem] md:blur-[120px] lg:h-[44rem] lg:w-[44rem]"

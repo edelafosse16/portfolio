@@ -35,6 +35,18 @@
   }
 }
 
+@layer utilities {
+  /* min-h-screen (100vh) is measured with the mobile browser chrome
+     collapsed, so as the address bar shows/hides during scroll the
+     hero's height jumps and the page visibly lurches. 100dvh tracks the
+     actual visible viewport continuously instead. Declared as a fallback
+     pair -- browsers without dvh support just keep the vh value. */
+  .min-h-screen-safe {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
