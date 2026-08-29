@@ -10,7 +10,7 @@ const SECTIONS = [
 
 const Nav = ({ activeSection, onSelect, isScrolled }) => (
   <nav
-    className={`bg-bg/80 backdrop-blur-md border-b border-line transition-shadow duration-300 sticky top-0 z-40 ${
+    className={`bg-bg border-b border-line transition-shadow duration-300 sticky top-0 z-40 ${
       isScrolled ? 'shadow-[0_1px_0_0_theme(colors.line)]' : ''
     }`}
   >
